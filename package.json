@@ -1,0 +1,15 @@
+{
+  "name": "base-less",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "lessc ./src/style.less ./src/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^4.1.1"
+  }
+}
