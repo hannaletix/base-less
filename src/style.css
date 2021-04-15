@@ -1,3 +1,220 @@
-h1 {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: arial;
+}
+body {
+  background: black;
+}
+.container {
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  /*flex-direction: row;*/
+  flex: 1;
+}
+@media (max-width: 620px) {
+  .container {
+    display: block;
+    flex-direction: column;
+  }
+}
+.container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+@media (max-width: 1200px) {
+  .container .header {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.container .header > img {
+  margin-left: 2rem;
+}
+.container .header > input {
+  outline: 0;
+  width: 26vw;
+  height: 4vh;
+  background: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+}
+.container .header > input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .container .header > input {
+    width: 20vh;
+    margin-left: 0.5rem;
+  }
+}
+.container .header i {
+  color: white;
+  margin-left: 50rem;
+  margin-top: 0.8rem;
+}
+@media (max-width: 1200px) {
+  .container .header i {
+    margin-left: 1rem;
+  }
+}
+.container .container__first {
+  background-color: #141414;
+  width: 52.7%;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  border-radius: 5px;
+  color: white;
+}
+.container .container__first > img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+}
+.container .container__first > h4 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+  margin-left: 0.5rem;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.container .container__first > span {
+  color: #999999;
+  border-right: 2px solid #999999;
+  margin-left: 0.5rem;
+  margin-right: 0.2rem;
+}
+.container .container__first span:nth-of-type(1) {
+  padding: 0 0.5rem 0 0;
+}
+.container .container__first span:nth-of-type(2) {
+  border: 1px solid #999999;
+}
+.container .container__first span:nth-of-type(3) {
+  border-left: 2px solid #999999;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.container .container__first span:nth-of-type(4) {
+  border-right: 0;
+}
+.container .container__first > p {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  margin-left: 0.5rem;
+}
+.container .container__first > p > a {
+  color: white;
+}
+.container .container__first > button {
+  width: 15vw;
+  height: 7vh;
+  border-radius: 5px;
+  outline: 0;
+  color: white;
+  border: 0;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1em;
+  margin-left: 0.5rem;
+}
+.container .container__first button:nth-of-type(1) {
+  background-color: red;
+}
+.container .container__first button:nth-of-type(1):hover {
+  background-color: #ff3333;
+}
+.container .container__first button:nth-of-type(2) {
+  background-color: #808080;
+}
+.container .container__first button:nth-of-type(2):hover {
+  background-color: #999999;
+}
+@media (max-width: 620px) {
+  .container .container__first button:nth-of-type(2) {
+    width: 25vw;
+  }
+}
+.container .container__second {
+  width: 42%;
+  position: absolute;
+  left: 48rem;
+  top: 4rem;
+}
+@media (max-width: 620px) {
+  .container .container__second {
+    position: relative;
+    margin: 0;
+  }
+}
+.container .container__second .container__second-firstContent {
+  margin-left: 0.5rem;
+  position: relative;
+}
+.container .container__second .container__second-firstContent > h4 {
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.2em;
+}
+.container .container__second .container__second-firstContent > img {
+  padding: 0.3rem 0.3rem;
+  max-width: 100%;
+}
+.container .container__second .container__second-firstContent .arrow {
+  background-color: transparent;
+  width: 2.5vw;
+  height: 38vh;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.3rem;
+}
+.container .container__second .container__second-firstContent .arrow > img {
+  margin-top: 6.5rem;
+  visibility: hidden;
+}
+.container .container__second .container__second-firstContent .arrow:hover {
+  transition: 0.3s;
+  background-color: black;
+  opacity: 0.5;
+}
+.container .container__second .container__second-firstContent .arrow:hover > img {
+  visibility: visible;
+}
+.container .container__second .container__second-secondContent {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+.container .container__second .container__second-secondContent > h4 {
+  color: white;
+  font-size: 1.2em;
+}
+.container .container__second .container__second-secondContent > img {
+  padding: 0.3rem 0.3rem;
+  max-width: 100%;
+}
+.container .container__second .container__second-secondContent .arrow {
+  background-color: transparent;
+  width: 2.5vw;
+  height: 38vh;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.6rem;
+}
+.container .container__second .container__second-secondContent .arrow > img {
+  margin-top: 6.5rem;
+  visibility: hidden;
+}
+.container .container__second .container__second-secondContent .arrow:hover {
+  transition: 0.3s;
+  background-color: black;
+  opacity: 0.5;
+}
+.container .container__second .container__second-secondContent .arrow:hover > img {
+  visibility: visible;
 }
