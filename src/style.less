@@ -1,127 +1,110 @@
 @background: black;
 @contrast: white;
 
-* {
+*{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html{
     font-family: arial;
 }
 
-body {
+body{
     background: @background;
 }
 
 .container{
+    background-color: @background;
+    color: @contrast;
     width: 100%;
-    min-height: 100%;
-    flex-direction: column;
-    /*flex-direction: row;*/
-    flex: 1;
-
-    @media (max-width: 620px){
-        display: block;
-        flex-direction: column;
-    }
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;  
 
     .header{
-        width: 100%; 
+        width: 100%;
         display: flex;
-        justify-content: space-between;
-        margin-top: 0.5em;
-
-        @media (max-width: 1200px){
-            width: 100%;
-            justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        
+        >img{
+            margin-left: 1rem;
         }
 
-        >img{
-            margin-left: 2rem;
+        >i{
+            margin-left: 4rem;
+            margin-right: 0.5rem;
+            margin-top: 0.6rem;
+            color: @contrast;
         }
 
         >input{
             outline: 0;
-            width: 26vw;
+            width: 35vw;
             height: 4vh;
             background: lighten(@contrast, 20%);
             border: 0;
             border-radius: 2px;
-            margin-top: 0.6rem;
-            margin-right: 1rem;
+            margin-top: 0.3rem;
 
             &::placeholder{
                 color: @background;
                 font-weight: bold;
             }
-
-            @media (max-width: 1200px){
-                width: 20vh;
-                margin-left: 0.5rem;
-            }
-        }
-
-        i{
-            color: @contrast;
-            margin-left: 50rem;
-            margin-top: 0.8rem;
-
-            @media (max-width: 1200px){
-                margin-left: 1rem;
-            }
         }
     }
 
-    .container__first{
+    &__first{
         background-color: lighten(@background, 8%);
-        width: 52.7%;
-        margin-top: 1rem;
-        margin-left: 1.5rem;
+        width: 100%;
         border-radius: 5px;
-        color: @contrast;
+
+        @media (min-width: 630px) {
+            width: 50%;
+            height: 85%;
+            margin-top: 1rem;
+        }
 
         >img{
-            border-radius: 5px 5px 0 0;
-            max-width: 100%; 
+            width: 100%;
         }
 
         >h4{
-            margin-top: 0.2rem;
-            margin-bottom: 0.6rem;
-            margin-left: 0.5rem;
-            font-size: 1.2em;
-            font-weight: bold; 
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 0.4rem;
         }
 
         >span{
-            color: lighten(@background, 60%); 
+            color: lighten(@background, 60%);
             border-right: 2px solid lighten(@background, 60%);
-            margin-left: 0.5rem;
-            margin-right: 0.2rem;
+            font-size: 1.12em;
         }
 
         span:nth-of-type(1){
-            padding: 0 0.5rem 0 0;
+           padding: 0 0.5rem 0 0; 
         }
 
         span:nth-of-type(2){
             border: 1px solid lighten(@background, 60%);
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
         }
 
         span:nth-of-type(3){
             border-left: 2px solid lighten(@background, 60%);
             padding: 0 0.5rem 0 0.5rem;
         }
-        
+
         span:nth-of-type(4){
             border-right: 0;
         }
 
         >p{
-            margin-top: 0.6rem;
-            margin-bottom: 0.6rem;
-            margin-left: 0.5rem;
+            margin-top: 0.4rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.12em;
 
             >a{
                 color: @contrast;
@@ -129,20 +112,38 @@ body {
         }
 
         >button{
-            width: 15vw;
-            height: 7vh;
-            border-radius: 5px;
             outline: 0;
             color: @contrast;
             border: 0;
-            align-items: center;
+            border-radius: 3px;
+            width: 40vw;
+            height: 4.3vh;
             font-weight: bold;
             font-size: 1em;
-            margin-left: 0.5rem;
+            margin-bottom: 0.4rem;
+
+            @media (min-width: 630px) {
+                width: 15vw;
+                height: 5vh;
+            }
+
+            &:hover{
+                animation: aumentar .10s;
+
+                @keyframes aumentar {
+                    to{
+                        transform: 0;
+                    }
+
+                    from{
+                        transform: scale(1.15);
+                    }
+                }
+            }
         }
 
         button:nth-of-type(1){
-            background-color: red;
+            background: red;
 
             &:hover{
                 background-color: lighten(red, 10%);
@@ -150,106 +151,153 @@ body {
         }
 
         button:nth-of-type(2){
-            background-color: lighten(@background, 50%);
+            background: lighten(@background, 50%);
 
             &:hover{
                 background-color: lighten(@background, 60%);
             }
-
-            @media (max-width: 620px){
-                width: 25vw;
-            }
         }
+
     }
 
     .container__second{
-        width: 42%;
-        position: absolute;
-        left: 48rem;
-        top: 4rem;
+        width: 100%;
 
-        @media (max-width: 620px){
-            position: relative;
-            margin: 0;
+        @media (min-width: 630px) {
+            width: 50%;
         }
 
         .container__second-firstContent{
-            margin-left: 0.5rem;
-            position: relative;
+            height: 47%;
 
-            >h4{
-                margin-bottom: 0.5rem;
-                color: @contrast;
-                font-size: 1.2em;
+            @media (min-width: 630px) {
+                margin-left: 1rem;
             }
 
             >img{
-                padding: 0.3rem 0.3rem;
-                max-width: 100%;
-            }
-
-            .arrow{
-                background-color: transparent;
-                width: 2.5vw;
-                height: 38vh;
-                position: absolute;
-                right: 0.5rem;
-                bottom: 0.3rem;
-
-                >img{
-                    margin-top: 6.5rem;
-                    visibility: hidden;
+                @media(min-width: 510px) {
+                    &:hover {
+                        transform: translate(4px, 4px);
+                    }
                 }
             }
 
-            .arrow:hover{
-                transition: 0.3s;
-                background-color: @background;
-                opacity: 0.5;
-                
-                >img{
-                    visibility: visible;
+            img:nth-of-type(1){
+                padding: 0 0.5rem 0 0;
+            }
+
+            img:nth-of-type(2){
+                padding: 0 0.5rem 0 0;
+            }
+
+            >h4{
+                font-size: 1.35em;
+                margin-top: 0.4rem;
+                margin-bottom: 0.4rem;
+
+                @media (min-width: 630px) {
+                    margin-top: 0;
                 }
             }
         }
 
         .container__second-secondContent{
-            margin-left: 0.5rem;
-            margin-top: 0.5rem;
+            height: 53%;
+
+            @media (min-width: 630px) {
+                margin-left: 1rem;
+                height: 50%;
+            }
 
             >h4{
-                color: @contrast;
-                font-size: 1.2em;
+                font-size: 1.35em;
+                margin-top: 0.4rem;
+                margin-bottom: 0.4rem;
             }
 
             >img{
-                padding: 0.3rem 0.3rem;
-                max-width: 100%;
-            }
-
-            .arrow{
-                background-color: transparent;
-                width: 2.5vw;
-                height: 38vh;
-                position: absolute;
-                right: 0.5rem;
-                bottom: 0.6rem;
-
-                >img{
-                    margin-top: 6.5rem;
-                    visibility: hidden;
+                @media(min-width: 510px) {
+                    &:hover {
+                        transform: translate(4px, 4px);
+                    }
                 }
             }
 
-            .arrow:hover{
-                transition: 0.3s;
-                background-color: @background;
-                opacity: 0.5;
-                
-                >img{
-                    visibility: visible;
+            img:nth-of-type(1){
+                padding: 0 0.5rem 0 0;
+            }
+
+            img:nth-of-type(2){
+                padding: 0 0.5rem 0 0;
+            }
+
+            >button{
+                margin-top: 0.2rem;
+                margin-bottom: 0.4rem;
+                margin-left: 11rem;
+                outline: 0;
+                color: @contrast;
+                border: 0;
+                border-radius: 3px;
+                width: 40vw;
+                height: 4.3vh;
+                font-weight: bold;
+                font-size: 1em;
+                background-color: red;
+                transition: .5s;
+
+                @media (min-width: 630px) {
+                    width: 19vw;
+                    height: 3.8vh;
                 }
             }
+        }
+    }
+
+    #oculta{
+        background-color: lighten(@background, 8%);
+        position: absolute;
+        align-items: center;
+        left: 25%;
+        top: 25%;
+        width: 40vw;
+        height: 40vh;
+        visibility: hidden;
+        border-radius: 5px;
+        color: @contrast;
+
+        >button{
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+            outline: 0;
+            background-color: transparent;
+            color: @contrast;
+            border: 0;
+        }
+
+        >select{
+            margin-left: 0.5rem;
+            margin-top: 0.3rem;
+            outline: 0;
+            background-color: lighten(@background, 60%);
+            color: @contrast;
+            width: 9vw;
+            height: 3.5vh;
+            font-size: 0.9em;
+            border: 0;
+        }
+
+        >p{
+            margin-top: 1rem;  
+            margin-left: 0.5rem;
+            font-size: 1.5em;
+        }
+
+        >img{
+            margin-top: 0.3rem;
+            margin-left: 0.5rem;
+            border-radius: 5px;
         }
     }
 }

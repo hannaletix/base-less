@@ -22,7 +22,7 @@
     </div>
 
     <div class="container__first">
-        <img src="strangerThings.jpg">
+        <img class="foto" src="strangerThings.jpg">
         <h4>Stranger Things</h4>
         <span>2016</span>
         <span>16</span>
@@ -38,13 +38,10 @@
     <div class="container__second">
 
       <div class="container__second-firstContent">
-        <h4>My List</h4>
+        <h4>Minha Lista</h4>
         <img src="aFall.jpg">
         <img src="IcareAlot.jpg">
         <img src="theCrown.jpg">
-        <div class="arrow">
-          <img src="arrow.png">
-        </div>  
       </div>
 
       <div class="container__second-secondContent">
@@ -52,14 +49,37 @@
         <img src="naruto.jpg">
         <img src="greys.jpg">
         <img src="whoKilled.jpg">
-        <div class="arrow">
-          <img src="arrow.png">
-        </div>
-
+        <button onclick="clicar()">Veja todas as séries e filmes</button>
       </div>
+    </div>
+
+    <div id="oculta">
+      <button id="button-click" onclick="cliqueExit()"><i class="fas fa-times"></i></button>
+
+      <select>
+        <option>Selecione</option>
+        <option>Filmes</option>
+        <option>Séries</option>
+      </select>
+
+      <select>
+        <option>Refinar</option>
+        <option>Ação</option>
+        <option>Aventura</option>
+        <option>Comédia</option>
+        <option>Romance</option>
+      </select>
+
+      <p>Todos os Filmes</p>
+
+      <img src="deixa.jpg">
+      <img src="10Things.jpg">
+      <img src="theBridge.jpg">
+      <img src="palmeiras.jpg">
     </div>
   </div>
 
+  <script src="jsIndex.js"></script>
 </body>
 
 </html>
