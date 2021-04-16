@@ -1,11 +1,11 @@
 function clicar(){
-    let el = document.getElementById('oculta');
+    let el = document.getElementById('container__hidden');
     
     el.style.visibility = 'visible';
 }
 
-function cliqueExit(){
-    let el = document.getElementById('oculta');
+function clicarExit(){
+    let el = document.getElementById('container__hidden');
     
     el.style.visibility = 'hidden';
 }

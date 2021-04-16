@@ -1,9 +1,9 @@
 @background: black;
-@contrast: white;
+@contrast  : white;
 
 *{
-    padding: 0;
-    margin: 0;
+    padding   : 0;
+    margin    : 0;
     box-sizing: border-box;
 }
 
@@ -15,17 +15,43 @@ body{
     background: @background;
 }
 
+h4{
+    font-size    : 1.35em;
+    font-weight  : bold;
+    margin-bottom: 0.4rem;
+}
+
+span{
+    color       : lighten(@background, 60%);
+    border-right: 2px solid lighten(@background, 60%);
+    font-size   : 1.12em;
+}
+
+button{
+    outline      : 0;
+    border       : 0;
+    border-radius: 3px;
+    width        : 40vw;
+    height       : 4.3vh;
+    font-weight  : bold;
+    font-size    : 1em;
+}
+
+i{
+    color: @contrast;
+}
+
 .container{
     background-color: @background;
-    color: @contrast;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;  
+    color           : @contrast;
+    width           : 100%;
+    height          : 100%;
+    display         : flex;
+    flex-wrap       : wrap;  
 
-    .header{
-        width: 100%;
-        display: flex;
+    &__header{
+        width        : 100%;
+        display      : flex;
         margin-bottom: 0.5rem;
         
         >img{
@@ -33,23 +59,22 @@ body{
         }
 
         >i{
-            margin-left: 4rem;
+            margin-left : 4rem;
             margin-right: 0.5rem;
-            margin-top: 0.6rem;
-            color: @contrast;
+            margin-top  : 0.6rem;
         }
 
         >input{
-            outline: 0;
-            width: 35vw;
-            height: 4vh;
-            background: lighten(@contrast, 20%);
-            border: 0;
+            outline      : 0;
+            width        : 35vw;
+            height       : 4vh;
+            background   : lighten(@contrast, 20%);
+            border       : 0;
             border-radius: 2px;
-            margin-top: 0.3rem;
+            margin-top   : 0.3rem;
 
             &::placeholder{
-                color: @background;
+                color      : @background;
                 font-weight: bold;
             }
         }
@@ -57,12 +82,12 @@ body{
 
     &__first{
         background-color: lighten(@background, 8%);
-        width: 100%;
-        border-radius: 5px;
+        width           : 100%;
+        border-radius   : 5px;
 
         @media (min-width: 630px) {
-            width: 50%;
-            height: 85%;
+            width     : 50%;
+            height    : 85%;
             margin-top: 1rem;
         }
 
@@ -70,31 +95,19 @@ body{
             width: 100%;
         }
 
-        >h4{
-            font-weight: bold;
-            font-size: 1.5em;
-            margin-bottom: 0.4rem;
-        }
-
-        >span{
-            color: lighten(@background, 60%);
-            border-right: 2px solid lighten(@background, 60%);
-            font-size: 1.12em;
-        }
-
         span:nth-of-type(1){
            padding: 0 0.5rem 0 0; 
         }
 
         span:nth-of-type(2){
-            border: 1px solid lighten(@background, 60%);
-            margin-left: 0.5rem;
+            border      : 1px solid lighten(@background, 60%);
+            margin-left : 0.5rem;
             margin-right: 0.5rem;
         }
 
         span:nth-of-type(3){
             border-left: 2px solid lighten(@background, 60%);
-            padding: 0 0.5rem 0 0.5rem;
+            padding    : 0 0.5rem 0 0.5rem;
         }
 
         span:nth-of-type(4){
@@ -102,9 +115,9 @@ body{
         }
 
         >p{
-            margin-top: 0.4rem;
+            margin-top   : 0.4rem;
             margin-bottom: 0.4rem;
-            font-size: 1.12em;
+            font-size    : 1.12em;
 
             >a{
                 color: @contrast;
@@ -112,18 +125,11 @@ body{
         }
 
         >button{
-            outline: 0;
-            color: @contrast;
-            border: 0;
-            border-radius: 3px;
-            width: 40vw;
-            height: 4.3vh;
-            font-weight: bold;
-            font-size: 1em;
+            color        : @contrast;
             margin-bottom: 0.4rem;
 
             @media (min-width: 630px) {
-                width: 15vw;
+                width : 15vw;
                 height: 5vh;
             }
 
@@ -160,18 +166,24 @@ body{
 
     }
 
-    .container__second{
+    &__second{
         width: 100%;
 
         @media (min-width: 630px) {
             width: 50%;
         }
 
-        .container__second-firstContent{
+        &--firstContent{
             height: 47%;
 
             @media (min-width: 630px) {
                 margin-left: 1rem;
+            }
+
+            &-carousel{
+                background-color: blue;
+                width: 55vw;
+                height: 42vh;
             }
 
             >img{
@@ -191,9 +203,7 @@ body{
             }
 
             >h4{
-                font-size: 1.35em;
                 margin-top: 0.4rem;
-                margin-bottom: 0.4rem;
 
                 @media (min-width: 630px) {
                     margin-top: 0;
@@ -201,18 +211,12 @@ body{
             }
         }
 
-        .container__second-secondContent{
+        &--secondContent{
             height: 53%;
 
             @media (min-width: 630px) {
                 margin-left: 1rem;
-                height: 50%;
-            }
-
-            >h4{
-                font-size: 1.35em;
-                margin-top: 0.4rem;
-                margin-bottom: 0.4rem;
+                height     : 50%;
             }
 
             >img{
@@ -231,72 +235,71 @@ body{
                 padding: 0 0.5rem 0 0;
             }
 
-            >button{
-                margin-top: 0.2rem;
-                margin-bottom: 0.4rem;
-                margin-left: 11rem;
-                outline: 0;
-                color: @contrast;
-                border: 0;
-                border-radius: 3px;
-                width: 40vw;
-                height: 4.3vh;
-                font-weight: bold;
-                font-size: 1em;
-                background-color: red;
-                transition: .5s;
+            >h4{
+                margin-top: 0.4rem;
 
                 @media (min-width: 630px) {
-                    width: 19vw;
+                    margin-top: 0;
+                }
+            }
+
+            >button{
+                margin-top      : 0.2rem;
+                margin-bottom   : 0.4rem;
+                margin-left     : 11rem;
+                color           : @contrast;
+                background-color: red;
+                transition      : .5s;
+
+                @media (min-width: 630px) {
+                    width : 19vw;
                     height: 3.8vh;
                 }
             }
         }
     }
 
-    #oculta{
+    #container__hidden{
         background-color: lighten(@background, 8%);
-        position: absolute;
-        align-items: center;
-        left: 25%;
-        top: 25%;
-        width: 40vw;
-        height: 40vh;
-        visibility: hidden;
-        border-radius: 5px;
-        color: @contrast;
+        position        : absolute;
+        align-items     : center;
+        left            : 25%;
+        top             : 25%;
+        width           : 40vw;
+        height          : 40vh;
+        visibility      : hidden;
+        border-radius   : 5px;
+        color           : @contrast;
 
         >button{
-            position: absolute;
-            right: 0.5rem;
-            top: 0.5rem;
-            outline: 0;
+            position        : absolute;
+            right           : 0.5rem;
+            top             : 0.5rem;
             background-color: transparent;
-            color: @contrast;
-            border: 0;
+            color           : @contrast;
         }
 
         >select{
-            margin-left: 0.5rem;
-            margin-top: 0.3rem;
-            outline: 0;
+            margin-left     : 0.5rem;
+            margin-top      : 0.3rem;
+            outline         : 0;
             background-color: lighten(@background, 60%);
-            color: @contrast;
-            width: 9vw;
-            height: 3.5vh;
-            font-size: 0.9em;
-            border: 0;
+            color           : @contrast;
+            width           : 9vw;
+            height          : 3.5vh;
+            font-size       : 0.9em;
+            border          : 0;
         }
 
         >p{
-            margin-top: 1rem;  
+            margin-top : 1rem;  
             margin-left: 0.5rem;
-            font-size: 1.5em;
+            font-size  : 1.5em;
         }
 
         >img{
-            margin-top: 0.3rem;
-            margin-left: 0.5rem;
+            margin-top   : 0.3rem;
+            margin-left  : 0.5rem;
             border-radius: 5px;
         }
     }

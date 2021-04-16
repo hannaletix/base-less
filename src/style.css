@@ -9,6 +9,28 @@ html {
 body {
   background: black;
 }
+h4 {
+  font-size: 1.35em;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+span {
+  color: #999999;
+  border-right: 2px solid #999999;
+  font-size: 1.12em;
+}
+button {
+  outline: 0;
+  border: 0;
+  border-radius: 3px;
+  width: 40vw;
+  height: 4.3vh;
+  font-weight: bold;
+  font-size: 1em;
+}
+i {
+  color: white;
+}
 .container {
   background-color: black;
   color: white;
@@ -17,21 +39,20 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.container .header {
+.container__header {
   width: 100%;
   display: flex;
   margin-bottom: 0.5rem;
 }
-.container .header > img {
+.container__header > img {
   margin-left: 1rem;
 }
-.container .header > i {
+.container__header > i {
   margin-left: 4rem;
   margin-right: 0.5rem;
   margin-top: 0.6rem;
-  color: white;
 }
-.container .header > input {
+.container__header > input {
   outline: 0;
   width: 35vw;
   height: 4vh;
@@ -40,7 +61,7 @@ body {
   border-radius: 2px;
   margin-top: 0.3rem;
 }
-.container .header > input::placeholder {
+.container__header > input::placeholder {
   color: black;
   font-weight: bold;
 }
@@ -58,16 +79,6 @@ body {
 }
 .container__first > img {
   width: 100%;
-}
-.container__first > h4 {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 0.4rem;
-}
-.container__first > span {
-  color: #999999;
-  border-right: 2px solid #999999;
-  font-size: 1.12em;
 }
 .container__first span:nth-of-type(1) {
   padding: 0 0.5rem 0 0;
@@ -93,14 +104,7 @@ body {
   color: white;
 }
 .container__first > button {
-  outline: 0;
   color: white;
-  border: 0;
-  border-radius: 3px;
-  width: 40vw;
-  height: 4.3vh;
-  font-weight: bold;
-  font-size: 1em;
   margin-bottom: 0.4rem;
 }
 @media (min-width: 630px) {
@@ -132,90 +136,89 @@ body {
 .container__first button:nth-of-type(2):hover {
   background-color: #999999;
 }
-.container .container__second {
+.container__second {
   width: 100%;
 }
 @media (min-width: 630px) {
-  .container .container__second {
+  .container__second {
     width: 50%;
   }
 }
-.container .container__second .container__second-firstContent {
+.container__second--firstContent {
   height: 47%;
 }
 @media (min-width: 630px) {
-  .container .container__second .container__second-firstContent {
+  .container__second--firstContent {
     margin-left: 1rem;
   }
 }
+.container__second--firstContent-carousel {
+  background-color: blue;
+  width: 55vw;
+  height: 42vh;
+}
 @media (min-width: 510px) {
-  .container .container__second .container__second-firstContent > img:hover {
+  .container__second--firstContent > img:hover {
     transform: translate(4px, 4px);
   }
 }
-.container .container__second .container__second-firstContent img:nth-of-type(1) {
+.container__second--firstContent img:nth-of-type(1) {
   padding: 0 0.5rem 0 0;
 }
-.container .container__second .container__second-firstContent img:nth-of-type(2) {
+.container__second--firstContent img:nth-of-type(2) {
   padding: 0 0.5rem 0 0;
 }
-.container .container__second .container__second-firstContent > h4 {
-  font-size: 1.35em;
+.container__second--firstContent > h4 {
   margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
 }
 @media (min-width: 630px) {
-  .container .container__second .container__second-firstContent > h4 {
+  .container__second--firstContent > h4 {
     margin-top: 0;
   }
 }
-.container .container__second .container__second-secondContent {
+.container__second--secondContent {
   height: 53%;
 }
 @media (min-width: 630px) {
-  .container .container__second .container__second-secondContent {
+  .container__second--secondContent {
     margin-left: 1rem;
     height: 50%;
   }
 }
-.container .container__second .container__second-secondContent > h4 {
-  font-size: 1.35em;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-}
 @media (min-width: 510px) {
-  .container .container__second .container__second-secondContent > img:hover {
+  .container__second--secondContent > img:hover {
     transform: translate(4px, 4px);
   }
 }
-.container .container__second .container__second-secondContent img:nth-of-type(1) {
+.container__second--secondContent img:nth-of-type(1) {
   padding: 0 0.5rem 0 0;
 }
-.container .container__second .container__second-secondContent img:nth-of-type(2) {
+.container__second--secondContent img:nth-of-type(2) {
   padding: 0 0.5rem 0 0;
 }
-.container .container__second .container__second-secondContent > button {
+.container__second--secondContent > h4 {
+  margin-top: 0.4rem;
+}
+@media (min-width: 630px) {
+  .container__second--secondContent > h4 {
+    margin-top: 0;
+  }
+}
+.container__second--secondContent > button {
   margin-top: 0.2rem;
   margin-bottom: 0.4rem;
   margin-left: 11rem;
-  outline: 0;
   color: white;
-  border: 0;
-  border-radius: 3px;
-  width: 40vw;
-  height: 4.3vh;
-  font-weight: bold;
-  font-size: 1em;
   background-color: red;
   transition: 0.5s;
 }
 @media (min-width: 630px) {
-  .container .container__second .container__second-secondContent > button {
+  .container__second--secondContent > button {
     width: 19vw;
     height: 3.8vh;
   }
 }
-.container #oculta {
+.container #container__hidden {
   background-color: #141414;
   position: absolute;
   align-items: center;
@@ -227,16 +230,14 @@ body {
   border-radius: 5px;
   color: white;
 }
-.container #oculta > button {
+.container #container__hidden > button {
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
-  outline: 0;
   background-color: transparent;
   color: white;
-  border: 0;
 }
-.container #oculta > select {
+.container #container__hidden > select {
   margin-left: 0.5rem;
   margin-top: 0.3rem;
   outline: 0;
@@ -247,12 +248,12 @@ body {
   font-size: 0.9em;
   border: 0;
 }
-.container #oculta > p {
+.container #container__hidden > p {
   margin-top: 1rem;
   margin-left: 0.5rem;
   font-size: 1.5em;
 }
-.container #oculta > img {
+.container #container__hidden > img {
   margin-top: 0.3rem;
   margin-left: 0.5rem;
   border-radius: 5px;
