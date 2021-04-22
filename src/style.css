@@ -5,19 +5,48 @@
 }
 html {
   font-family: arial;
+  width: 100%;
+  height: 100%;
 }
 body {
   background: black;
+  width: 100%;
+  height: 100%;
 }
 h4 {
   font-size: 1.35em;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }
+@media (min-width: 760px) {
+  h4 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1000px) {
+  h4 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 1100px) {
+  h4 {
+    font-size: 2em;
+  }
+}
 span {
   color: #999999;
   border-right: 2px solid #999999;
-  font-size: 1.12em;
+  font-size: 1em;
+}
+@media (min-width: 1000px) {
+  span {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1100px) {
+  span {
+    font-size: 1.2em;
+  }
 }
 button {
   outline: 0;
@@ -27,6 +56,16 @@ button {
   height: 4.3vh;
   font-weight: bold;
   font-size: 1em;
+}
+@media (min-width: 1000px) {
+  button {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1100px) {
+  button {
+    font-size: 1.5em;
+  }
 }
 i {
   color: white;
@@ -52,9 +91,14 @@ i {
   margin-right: 0.5rem;
   margin-top: 0.6rem;
 }
+@media (min-width: 760px) {
+  .container__header > i {
+    margin-left: 35%;
+  }
+}
 .container__header > input {
   outline: 0;
-  width: 35vw;
+  width: 42vw;
   height: 4vh;
   background: #ffffff;
   border: 0;
@@ -65,16 +109,37 @@ i {
   color: black;
   font-weight: bold;
 }
+@media (min-width: 760px) {
+  .container__header > input {
+    height: 3vh;
+  }
+}
+@media (min-width: 1000px) {
+  .container__header > input {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1100px) {
+  .container__header > input {
+    font-size: 1em;
+    margin-top: 0.5rem;
+  }
+}
 .container__first {
   background-color: #141414;
   width: 100%;
   border-radius: 5px;
 }
-@media (min-width: 630px) {
+@media (min-width: 800px) {
   .container__first {
     width: 50%;
     height: 85%;
     margin-top: 1rem;
+  }
+}
+@media (min-width: 1100px) {
+  .container__first {
+    height: 100%;
   }
 }
 .container__first > img {
@@ -103,14 +168,28 @@ i {
 .container__first > p > a {
   color: white;
 }
+@media (min-width: 1000px) {
+  .container__first > p {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1100px) {
+  .container__first > p {
+    font-size: 1.3em;
+  }
+}
 .container__first > button {
   color: white;
   margin-bottom: 0.4rem;
+  margin-left: 0.6rem;
+  width: 45vw;
+  height: 4.3vh;
 }
-@media (min-width: 630px) {
+@media (min-width: 1100px) {
   .container__first > button {
-    width: 15vw;
-    height: 5vh;
+    width: 23vw;
+    height: 6vh;
+    margin-top: 1rem;
   }
 }
 .container__first > button:hover {
@@ -138,123 +217,381 @@ i {
 }
 .container__second {
   width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
-@media (min-width: 630px) {
+@media (min-width: 800px) {
   .container__second {
     width: 50%;
   }
 }
-.container__second--firstContent {
-  height: 47%;
-}
-@media (min-width: 630px) {
-  .container__second--firstContent {
-    margin-left: 1rem;
+@media (min-width: 1000px) {
+  .container__second {
+    height: 70%;
   }
 }
-.container__second--firstContent-carousel {
-  background-color: blue;
-  width: 55vw;
-  height: 42vh;
+.container__second--firstContent {
+  height: 47%;
+  width: 100%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
-@media (min-width: 510px) {
+.container__second--firstContent > img {
+  display: inline-flex;
+  margin-left: 0.4rem;
+}
+@media (max-width: 370px) {
+  .container__second--firstContent > img {
+    width: 160px;
+    height: 190px;
+  }
+}
+@media (max-width: 320px) {
+  .container__second--firstContent > img {
+    width: 140px;
+    height: 170px;
+  }
+}
+@media (max-width: 285px) {
+  .container__second--firstContent > img {
+    width: 125px;
+    height: 160px;
+  }
+}
+@media (min-width: 760px) {
+  .container__second--firstContent > img {
+    width: 238px;
+    height: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--firstContent > img {
+    width: 150px;
+    height: 200px;
+  }
   .container__second--firstContent > img:hover {
     transform: translate(4px, 4px);
   }
 }
-.container__second--firstContent img:nth-of-type(1) {
-  padding: 0 0.5rem 0 0;
+.container__second--firstContent img:nth-of-type(3) {
+  display: none;
 }
-.container__second--firstContent img:nth-of-type(2) {
-  padding: 0 0.5rem 0 0;
+@media (min-width: 760px) {
+  .container__second--firstContent img:nth-of-type(3) {
+    display: inline-block;
+  }
+}
+@media (min-width: 1000px) {
+  .container__second--firstContent img:nth-of-type(3) {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--firstContent img:nth-of-type(3) {
+    display: inline-block;
+  }
+}
+.container__second--firstContent img:nth-of-type(4) {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .container__second--firstContent img:nth-of-type(4) {
+    display: inline-block;
+  }
+}
+.container__second--firstContent img:nth-of-type(5) {
+  display: none;
+}
+.container__second--firstContent img:nth-of-type(6) {
+  display: none;
+}
+.container__second--firstContent img:nth-of-type(7) {
+  display: none;
+}
+.container__second--firstContent img:nth-of-type(8) {
+  display: none;
+}
+.container__second--firstContent img:nth-of-type(9) {
+  display: none;
 }
 .container__second--firstContent > h4 {
-  margin-top: 0.4rem;
+  margin-left: 0.4rem;
 }
-@media (min-width: 630px) {
+@media (max-width: 375px) {
   .container__second--firstContent > h4 {
-    margin-top: 0;
+    margin-top: 1rem;
+  }
+}
+.container__second--firstContent > button {
+  margin-left: 1.2rem;
+  margin-top: 0.6rem;
+  color: white;
+  background-color: red;
+  transition: 0.5s;
+  width: 40vw;
+  height: 4vh;
+  animation: move-right 0.6s;
+}
+@keyframes move-right {
+  from {
+    opacity: 0;
+    transform: translateX(-10em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 760px) {
+  .container__second--firstContent > button {
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .container__second--firstContent > button {
+    margin-left: 1rem;
+    width: 22vw;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--firstContent > button {
+    height: 5vh;
   }
 }
 .container__second--secondContent {
   height: 53%;
+  width: 100%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
-@media (min-width: 630px) {
+@media (min-width: 1200px) {
   .container__second--secondContent {
-    margin-left: 1rem;
-    height: 50%;
+    margin-top: 6rem;
   }
 }
-@media (min-width: 510px) {
+.container__second--secondContent > img {
+  display: inline-flex;
+  margin-left: 0.4rem;
+  /*Senti bastante dificuldade em deixar essas imagens responsivas
+                Obs: nem acho que tenha ficado :/ */
+}
+@media (max-width: 370px) {
+  .container__second--secondContent > img {
+    width: 160px;
+    height: 190px;
+  }
+}
+@media (max-width: 320px) {
+  .container__second--secondContent > img {
+    width: 140px;
+    height: 170px;
+  }
+}
+@media (max-width: 285px) {
+  .container__second--secondContent > img {
+    width: 125px;
+    height: 160px;
+  }
+}
+@media (min-width: 760px) {
+  .container__second--secondContent > img {
+    width: 238px;
+    height: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--secondContent > img {
+    width: 150px;
+    height: 200px;
+  }
   .container__second--secondContent > img:hover {
     transform: translate(4px, 4px);
   }
 }
-.container__second--secondContent img:nth-of-type(1) {
-  padding: 0 0.5rem 0 0;
+.container__second--secondContent img:nth-of-type(3) {
+  display: none;
 }
-.container__second--secondContent img:nth-of-type(2) {
-  padding: 0 0.5rem 0 0;
+@media (min-width: 760px) {
+  .container__second--secondContent img:nth-of-type(3) {
+    display: inline-block;
+  }
+}
+@media (min-width: 1000px) {
+  .container__second--secondContent img:nth-of-type(3) {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--secondContent img:nth-of-type(3) {
+    display: inline-block;
+  }
+}
+.container__second--secondContent img:nth-of-type(4) {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .container__second--secondContent img:nth-of-type(4) {
+    display: inline-block;
+  }
+}
+.container__second--secondContent img:nth-of-type(5) {
+  display: none;
+}
+.container__second--secondContent img:nth-of-type(6) {
+  display: none;
+}
+.container__second--secondContent img:nth-of-type(7) {
+  display: none;
+}
+.container__second--secondContent img:nth-of-type(8) {
+  display: none;
+}
+.container__second--secondContent img:nth-of-type(9) {
+  display: none;
 }
 .container__second--secondContent > h4 {
   margin-top: 0.4rem;
+  margin-left: 0.4rem;
 }
-@media (min-width: 630px) {
+@media (max-width: 370px) {
   .container__second--secondContent > h4 {
-    margin-top: 0;
+    margin-top: 1rem;
   }
 }
 .container__second--secondContent > button {
-  margin-top: 0.2rem;
-  margin-bottom: 0.4rem;
-  margin-left: 11rem;
+  margin-left: 1.2rem;
+  margin-top: 0.6rem;
   color: white;
   background-color: red;
   transition: 0.5s;
+  width: 40vw;
+  height: 4vh;
+  animation: move-right 0.6s;
 }
-@media (min-width: 630px) {
+@keyframes move-right {
+  from {
+    opacity: 0;
+    transform: translateX(-10em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 760px) {
   .container__second--secondContent > button {
-    width: 19vw;
-    height: 3.8vh;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .container__second--secondContent > button {
+    margin-left: 1rem;
+    width: 22vw;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--secondContent > button {
+    height: 5vh;
+  }
+}
+.container__second--secondContent button:nth-of-type(3) {
+  width: 100%;
+  height: 5vh;
+  margin: 2rem 0 0 0;
+  font-size: 1.3em;
+  background: #808080;
+}
+@media (max-width: 370px) {
+  .container__second--secondContent button:nth-of-type(3) {
+    margin: 1rem 0 0 0;
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 1000px) {
+  .container__second--secondContent button:nth-of-type(3) {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .container__second--secondContent button:nth-of-type(3) {
+    font-size: 1.1em;
+    margin: 1rem 0 0 0;
   }
 }
 .container #container__hidden {
-  background-color: #141414;
-  position: absolute;
-  align-items: center;
-  left: 25%;
-  top: 25%;
-  width: 40vw;
-  height: 40vh;
-  visibility: hidden;
-  border-radius: 5px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
   color: white;
+  display: none;
 }
-.container #container__hidden > button {
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  background-color: transparent;
-  color: white;
+@media (min-width: 1200px) {
+  .container #container__hidden {
+    width: 100%;
+    height: 80%;
+  }
 }
 .container #container__hidden > select {
   margin-left: 0.5rem;
-  margin-top: 0.3rem;
+  margin-top: 2rem;
   outline: 0;
   background-color: #999999;
   color: white;
-  width: 9vw;
-  height: 3.5vh;
-  font-size: 0.9em;
+  width: 30vw;
+  height: 3.8vh;
+  font-size: 1em;
   border: 0;
 }
+@media (min-width: 1200px) {
+  .container #container__hidden > select {
+    margin-top: 0.5rem;
+  }
+}
+.container #container__hidden > button {
+  background-color: transparent;
+  color: white;
+  width: 5vw;
+  margin-left: 6rem;
+}
+@media (min-width: 320px) {
+  .container #container__hidden > button {
+    margin-left: 5.2rem;
+  }
+}
+@media (min-width: 760px) {
+  .container #container__hidden > button {
+    margin-left: 14rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container #container__hidden > button {
+    margin-left: 27rem;
+  }
+}
 .container #container__hidden > p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: 0.5rem;
   font-size: 1.5em;
 }
-.container #container__hidden > img {
-  margin-top: 0.3rem;
-  margin-left: 0.5rem;
-  border-radius: 5px;
+.container #container__hidden > p > b {
+  color: red;
+}
+.container #container__hidden .container__hidden--grid {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+@media (min-width: 1200px) {
+  .container #container__hidden .container__hidden--grid {
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+}
+.container #container__hidden .container__hidden--grid > div {
+  border: 8px solid black;
+}
+.container #container__hidden .container__hidden--grid > div > img {
+  width: 100%;
+  height: 100%;
 }

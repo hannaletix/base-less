@@ -39,23 +39,43 @@
 
       <div class="container__second--firstContent">
         <h4>Minha Lista</h4>
-        <img src="Imagens/aFall.jpg">
-        <img src="Imagens/IcareAlot.jpg">
-        <img src="Imagens/theCrown.jpg">
+        <img src="Imagens/aFall.jpg" width="170px" height="195px">
+        <img src="Imagens/IcareAlot.jpg" width="170px" height="195px">
+        <img id="imagem-none--first" src="Imagens/theCrown.jpg" width="170px" height="195px">
+        <img id="imagem-none--second" src="Imagens/whoKilled.jpg" width="170px" height="195px">
+        <img id="imagem-none--third" src="Imagens/modern.jpg" width="170px" height="195px">
+        <img id="imagem-none--fourth" src="Imagens/money.jpg" width="170px" height="195px">
+
+        <!--Essas imagens só irão aparecer em telas maiores que width:1100px-->
+        <img id="imagem-none--fifth" src="Imagens/toAllBoys.jpg" width="170px" height="195px">
+        <img id="imagem-none--sixth" src="Imagens/shrek.jpg" width="170px" height="195px">
+        <img id="imagem-none--seventh" src="Imagens/lucifer.jpg" width="170px" height="195px">
+
+        <button onclick="clicar()">Ver mais</button>
+        <button onclick="voltar()">Voltar</button>
       </div>
 
       <div class="container__second--secondContent">
         <h4>Popular on Netflix</h4>
-        <img src="Imagens/naruto.jpg">
-        <img src="Imagens/greys.jpg">
-        <img src="Imagens/whoKilled.jpg">
-        <button onclick="clicar()">Veja todas as séries e filmes</button>
+        <img src="Imagens/naruto.jpg" width="170px" height="195px">
+        <img src="Imagens/greys.jpg" width="170px" height="195px">
+        <img id="imagem-none--first2" src="Imagens/deixa.jpg" width="170px" height="195px">
+        <img id="imagem-none--second2" src="Imagens/theBridge.jpg" width="170px" height="195px">
+        <img id="imagem-none--third2" src="Imagens/firely.jpg" width="170px" height="195px">
+        <img id="imagem-none--fourth2" src="Imagens/never.jpg" width="170px" height="195px">
+
+        <!--Essas imagens só irão aparecer em telas maiores que width:1100px-->
+        <img id="imagem-none--fifth2" src="Imagens/elite.jpg" width="170px" height="195px">
+        <img id="imagem-none--sixth2" src="Imagens/atypical.jpg" width="170px" height="195px">
+        <img id="imagem-none--seventh2" src="Imagens/tiny.jpg" width="170px" height="195px">
+
+        <button onclick="clicarSecond()">Ver mais</button>
+        <button onclick="voltarSecond()">Voltar</button>
+        <button onclick="container()">Veja todas as séries e filmes</button>
       </div>
     </div>
 
     <div id="container__hidden">
-      <button onclick="clicarExit()"><i class="fas fa-times"></i></button>
-
       <select>
         <option>Selecione</option>
         <option>Filmes</option>
@@ -70,12 +90,27 @@
         <option>Romance</option>
       </select>
 
-      <p>Todos os Filmes</p>
+      <button onclick="clicarExit()"><i class="fas fa-times"></i></button>
 
-      <img src="Imagens/deixa.jpg">
-      <img src="Imagens/10Things.jpg">
-      <img src="Imagens/theBridge.jpg">
-      <img src="Imagens/palmeiras.jpg">
+      <p>Todos os <b>Filmes</b> </p>
+
+      <div class="container__hidden--grid">
+        <div class="grid-item"><img src="Imagens/porLugares.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/oPrimeiro.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/milagre.jpg"></div>  
+	      <div class="grid-item"><img src="Imagens/fragmentado.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/birdBox.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/animaisFantasticos.jpg"></div>
+        <div class="grid-item"><img src="Imagens/everyDay.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/theKissing.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/someone.jpg"></div>  
+	      <div class="grid-item"><img src="Imagens/calMeBy.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/double.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/asVantagens.jpg"></div>
+        <div class="grid-item"><img src="Imagens/creed.jpg"></div>
+	      <div class="grid-item"><img src="Imagens/miracle.jpg"></div>
+        
+      </div>
     </div>
     
   </div>
